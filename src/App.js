@@ -7,6 +7,7 @@ Ext.define('CustomApp', {
                 items: [
                     {
                     xtype: 'rallyprojectpicker',
+                    fieldLabel: 'select project',
                         listeners:{
                             change: function(combobox){
                                 if (!this.down('#u')) {
@@ -33,6 +34,7 @@ Ext.define('CustomApp', {
             var u = Ext.create('Rally.ui.combobox.UserComboBox',{
                 id: 'u',
                 project: project,
+                fieldLabel: 'select user',
                 listeners:{
    			ready: function(combobox){
                                 this._onUserSelected(combobox.getRecord());

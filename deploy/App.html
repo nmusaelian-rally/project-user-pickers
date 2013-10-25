@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Project Picker</title>
+    <title>Project and User Picker</title>
 
     <script type="text/javascript" src="/apps/2.0rc1/sdk.js"></script>
 
@@ -18,6 +18,7 @@ Ext.define('CustomApp', {
                 items: [
                     {
                     xtype: 'rallyprojectpicker',
+                    fieldLabel: 'select project',
                         listeners:{
                             change: function(combobox){
                                 if (!this.down('#u')) {
@@ -44,6 +45,7 @@ Ext.define('CustomApp', {
             var u = Ext.create('Rally.ui.combobox.UserComboBox',{
                 id: 'u',
                 project: project,
+                fieldLabel: 'select user',
                 listeners:{
    			ready: function(combobox){
                                 this._onUserSelected(combobox.getRecord());
@@ -65,7 +67,7 @@ Ext.define('CustomApp', {
 
             
             Rally.launchApp('CustomApp', {
-                name:"Project Picker"
+                name:"Project and User Picker"
                 //parentRepos:""
             });
 
