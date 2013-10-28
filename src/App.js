@@ -27,30 +27,6 @@ Ext.define('CustomApp', {
                             scope: this
                         }
                     },
-                    //this is a combobox that will load all users from the sub. The selection in it is unrelated to the project picker selection
-                    //commented out
-                    /*
-                    {
-                        xtype: 'rallycombobox',
-                        fieldLabel: 'select project',
-                        storeConfig: {
-                            autoLoad: true,
-                            model: 'User',
-                            filters:[
-                                {
-                                    property: 'ObjectID',
-                                    operator: '>',
-                                    value: 0
-                                }
-                            ],
-                            sorters: [
-                                {
-                                    property: 'UserName',
-                                    direction: 'ASC'
-                                }
-                            ]
-                        }
-                    }*/
                 ],
             });
             this.add(c);
@@ -100,9 +76,7 @@ Ext.define('CustomApp', {
                  fetch: ['FormattedID','Name', 'Owner', 'ScheduleState'],
                  autoLoad: true,
                  filters : [filter],
-                 //filters: [this.getContext().getTimeboxScope().getQueryFilter()],
                  listeners: {
-                     //load: this._onDataLoaded,
                      load: function(store,records, success){
                         this._updateGrid(_store);
                      },

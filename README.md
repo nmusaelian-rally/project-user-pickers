@@ -3,6 +3,7 @@ Project Picker and User Picker example
 
 ## Overview
 ![](projectPicker.png)
+![](StoriesByOwner.png)
 
 ## License
 
