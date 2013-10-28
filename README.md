@@ -2,7 +2,7 @@ Project Picker and User Picker example
 =========================
 
 ## Overview
-
+![](projectPicker.png)
 
 ## License
 
