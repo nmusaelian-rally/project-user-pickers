@@ -37,7 +37,7 @@ Ext.define('CustomApp', {
             console.log('project', project);
             
             
-            var u = Ext.create('Rally.ui.combobox.UserComboBox',{
+            var u = Ext.create('Rally.ui.combobox.UserSearchComboBox',{
                 id: 'u',
                 project: project,
                 fieldLabel: 'select user',
